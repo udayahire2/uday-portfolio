@@ -772,6 +772,10 @@ html {
     /* ...existing code... */
 }
 
+.Projects{
+    
+}
+
 /* Responsive adjustments for scroll-padding and section margins */
 @media (max-width: 900px) {
     html {
