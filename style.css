@@ -34,20 +34,23 @@ body {
 }
 
 .modern-portfolio .Ellipse1 {
-  top: 5%;
-  left: -5%;
+  top: clamp(2%, 5vh, 5%);
+  left: clamp(-10%, -5vw, -5%);
   position: absolute;
-  width: clamp(300px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+  width: clamp(200px, 40vw, 600px);
+  height: clamp(200px, 40vw, 600px);
   flex-shrink: 0;
-  border-radius: 971px;
+  border-radius: 50%;
   opacity: 0.36;
   background: radial-gradient(50.16% 49.53% at 50.05% 50%,
       rgba(223, 101, 20, 0) 0.49%,
       rgba(167, 0, 205, 0.42) 100%);
   box-shadow: -4px 54px 65px 0 rgba(123, 0, 255, 0.35) inset;
   backdrop-filter: blur(33.25px);
-  animation: anim 4.5s ease-out backwards, zoom 10s ease-in-out 4.5s infinite;
+  animation: 
+    floatAnimation 8s ease-in-out infinite,
+    glowAnimation 4s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 @keyframes anim {
@@ -62,111 +65,163 @@ body {
   }
 }
 
-@keyframes anima {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translate(0, 0);
   }
+  25% {
+    transform: translate(-10px, 10px);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  75% {
+    transform: translate(10px, 10px);
+  }
+}
 
+@keyframes glowAnimation {
+  0% {
+    opacity: 0.25;
+    filter: brightness(0.8);
+  }
   100% {
-    opacity: 1;
-    transform: translateY(0%);
+    opacity: 0.45;
+    filter: brightness(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .modern-portfolio .Ellipse1,
+  .modern-portfolio .Ellipse2,
+  .modern-portfolio .Ellipse3,
+  .modern-portfolio .Ellipse4,
+  .modern-portfolio .Ellipse7,
+  .modern-portfolio .Ellipse9 {
+    width: clamp(150px, 50vw, 300px);
+    height: clamp(150px, 50vw, 300px);
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-portfolio .Ellipse1,
+  .modern-portfolio .Ellipse2,
+  .modern-portfolio .Ellipse3,
+  .modern-portfolio .Ellipse4,
+  .modern-portfolio .Ellipse7,
+  .modern-portfolio .Ellipse9 {
+    width: clamp(100px, 40vw, 200px);
+    height: clamp(100px, 40vw, 200px);
   }
 }
 
 .modern-portfolio .Ellipse2 {
-  right: -5%;
-  top: -5%;
   position: absolute;
-  width: clamp(300px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+  right: clamp(-15%, -5vw, -2%);
+  top: clamp(-10%, -5vh, -2%);
+  width: clamp(200px, 40vw, 600px);
+  height: clamp(200px, 40vw, 600px);
   flex-shrink: 0;
-  border-radius: 971px;
+  border-radius: 50%;
   opacity: 0.36;
   background: radial-gradient(50.16% 49.53% at 50.05% 50%,
       rgba(223, 101, 20, 0) 0.49%,
       rgba(7, 205, 0, 0.42) 100%);
   box-shadow: 32px 4px 60px 0 rgba(0, 202, 148, 0.25) inset;
   backdrop-filter: blur(33.25px);
-  animation: anima 4.5s ease-out backwards, zoom 10s ease-in-out 4.5s infinite;
+  animation: 
+    floatAnimation 8s ease-in-out infinite reverse,
+    glowAnimation 4s ease-in-out infinite alternate-reverse;
 }
 
 .modern-portfolio .Ellipse3 {
-  right: -250px;
-  top: 500px;
+  right: clamp(-15%, -10vw, -5%);
+  top: clamp(30%, 40vh, 50%);
   position: absolute;
-  width: clamp(300px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+  width: clamp(200px, 40vw, 600px);
+  height: clamp(200px, 40vw, 600px);
   flex-shrink: 0;
-  border-radius: 971px;
+  border-radius: 50%;
   opacity: 0.36;
   background: radial-gradient(50.16% 49.53% at 50.05% 50%,
       rgba(223, 101, 20, 0) 0.49%,
       rgba(205, 0, 14, 0.42) 100%);
   box-shadow: 32px 4px 60px 0 rgba(0, 202, 148, 0.25) inset;
   backdrop-filter: blur(33.25px);
-  animation: anima 4.5s ease-out backwards, zoom 10s ease-in-out 4.5s infinite;
+  animation: 
+    floatAnimation 8s ease-in-out infinite,
+    glowAnimation 4s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .modern-portfolio .Ellipse4 {
-  left: -250px;
-  top: 1000px;
+  left: clamp(-15%, -10vw, -5%);
+  top: clamp(60%, 70vh, 80%);
   position: absolute;
-  width: clamp(300px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+  width: clamp(200px, 40vw, 600px);
+  height: clamp(200px, 40vw, 600px);
   flex-shrink: 0;
-  border-radius: 971px;
+  border-radius: 50%;
   opacity: 0.36;
   background: radial-gradient(50.16% 49.53% at 50.05% 50%,
       rgba(223, 101, 20, 0) 0.49%,
       rgba(0, 126, 205, 0.42) 100%);
   box-shadow: -4px 54px 65px 0 rgba(0, 51, 205, 0.35) inset;
   backdrop-filter: blur(33.25px);
-  animation: anima 4.5s ease-out backwards, zoom 10s ease-in-out 4.5s infinite;
+  animation: 
+    floatAnimation 8s ease-in-out infinite reverse,
+    glowAnimation 4s ease-in-out infinite alternate-reverse;
+  will-change: transform;
 }
 
 .modern-portfolio .Ellipse7 {
-  left: -250px;
-  top: 1800px;
+  left: clamp(-15%, -10vw, -5%);
+  top: clamp(110%, 120vh, 130%);
   position: absolute;
-  width: clamp(300px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+  width: clamp(200px, 40vw, 600px);
+  height: clamp(200px, 40vw, 600px);
   flex-shrink: 0;
-  border-radius: 971px;
+  border-radius: 50%;
   opacity: 0.36;
   background: radial-gradient(50.16% 49.53% at 50.05% 50%,
       rgba(223, 101, 20, 0) 0.49%,
       rgba(0, 126, 205, 0.42) 100%);
   box-shadow: -4px 54px 65px 0 rgba(0, 51, 205, 0.35) inset;
   backdrop-filter: blur(33.25px);
-  animation: anima 4.5s ease-out backwards, zoom 10s ease-in-out 4.5s infinite;
+  animation: 
+    floatAnimation 8s ease-in-out infinite,
+    glowAnimation 4s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .modern-portfolio .Ellipse9 {
-  left: -250px;
-  top: 2600px;
+  left: clamp(-15%, -10vw, -5%);
+  top: clamp(160%, 170vh, 180%);
   position: absolute;
-  width: clamp(300px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+  width: clamp(200px, 40vw, 600px);
+  height: clamp(200px, 40vw, 600px);
   flex-shrink: 0;
-  border-radius: 971px;
+  border-radius: 50%;
   opacity: 0.36;
   background: radial-gradient(50.16% 49.53% at 50.05% 50%,
       rgba(223, 101, 20, 0) 0.49%,
       rgba(0, 126, 205, 0.42) 100%);
   box-shadow: -4px 54px 65px 0 rgba(0, 51, 205, 0.35) inset;
   backdrop-filter: blur(33.25px);
-  animation: anima 4.5s ease-out backwards, zoom 10s ease-in-out 4.5s infinite;
+  animation: 
+    floatAnimation 8s ease-in-out infinite reverse,
+    glowAnimation 4s ease-in-out infinite alternate-reverse;
+  will-change: transform;
 }
 
 .modern-portfolio .Ellipse10 {
-  left: -250px;
-  top: 3300px;
+  left: clamp(-15%, -10vw, -5%);
+  top: clamp(210%, 220vh, 230%);
   position: absolute;
-  width: clamp(300px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+  width: clamp(200px, 40vw, 600px);
+  height: clamp(200px, 40vw, 600px);
   flex-shrink: 0;
-  border-radius: 971px;
+  border-radius: 50%;
   opacity: 0.36;
   background: radial-gradient(50.16% 49.53% at 50.05% 50%,
       rgba(223, 101, 20, 0) 0.49%,
@@ -177,13 +232,13 @@ body {
 }
 
 .modern-portfolio .Ellipse5 {
-  right: -250px;
-  top: 1200px;
+  right: clamp(-15%, -10vw, -5%);
+  top: clamp(90%, 100vh, 110%);
   position: absolute;
-  width: clamp(300px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+  width: clamp(200px, 40vw, 600px);
+  height: clamp(200px, 40vw, 600px);
   flex-shrink: 0;
-  border-radius: 971px;
+  border-radius: 50%;
   opacity: 0.36;
   background: radial-gradient(50.16% 49.53% at 50.05% 50%,
       rgba(223, 101, 20, 0) 0.49%,
@@ -194,13 +249,13 @@ body {
 }
 
 .modern-portfolio .Ellipse6 {
-  right: -250px;
-  top: 2000px;
+  right: clamp(-15%, -10vw, -5%);
+  top: clamp(140%, 150vh, 160%);
   position: absolute;
-  width: clamp(300px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+  width: clamp(200px, 40vw, 600px);
+  height: clamp(200px, 40vw, 600px);
   flex-shrink: 0;
-  border-radius: 971px;
+  border-radius: 50%;
   opacity: 0.36;
   background: radial-gradient(50.16% 49.53% at 50.05% 50%,
       rgba(223, 101, 20, 0) 0.49%,
@@ -211,13 +266,13 @@ body {
 }
 
 .modern-portfolio .Ellipse8 {
-  right: -250px;
-  top: 2800px;
+  right: clamp(-15%, -10vw, -5%);
+  top: clamp(190%, 200vh, 210%);
   position: absolute;
-  width: clamp(300px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+  width: clamp(200px, 40vw, 600px);
+  height: clamp(200px, 40vw, 600px);
   flex-shrink: 0;
-  border-radius: 971px;
+  border-radius: 50%;
   opacity: 0.36;
   background: radial-gradient(50.16% 49.53% at 50.05% 50%,
       rgba(223, 101, 20, 0) 0.49%,
@@ -237,8 +292,8 @@ body {
 
 .header .dynamic-island {
   display: flex;
-  gap: 25px;
-  padding: 12px 30px;
+  gap: clamp(15px, 2vw, 25px);
+  padding: clamp(8px, 2vw, 12px) clamp(20px, 3vw, 30px);
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(12px);
@@ -247,6 +302,9 @@ body {
     0 8px 32px 0 rgba(0, 0, 0, 0.25),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   animation: slidout 1.5s ease-out backwards;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes slidout {
@@ -265,12 +323,41 @@ body {
   color: white;
   text-decoration: none;
   font-family: Inter;
-  font-size: 22px;
-  transition: 0.75s;
+  font-size: clamp(16px, 2vw, 22px);
+  transition: 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 15px;
+  white-space: nowrap;
 }
 
 .dynamic-island a:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .header .dynamic-island {
+    gap: clamp(10px, 1.5vw, 15px);
+    padding: 8px 15px;
+  }
+  
+  .dynamic-island a {
+    font-size: clamp(14px, 1.5vw, 16px);
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .dynamic-island {
+    gap: 8px;
+    padding: 6px 10px;
+    flex-wrap: wrap;
+  }
+  
+  .dynamic-island a {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
 }
 
 /* HERO SECTION */
@@ -279,6 +366,7 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  margin-top:25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,7 +389,6 @@ body {
 .hero .intro {
   padding: 40px;
   border-radius: 30px;
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1225,14 +1312,18 @@ body {
 }
 
 @media (max-width: 600px) {
-
   .modern-portfolio .Ellipse1,
   .modern-portfolio .Ellipse2,
   .modern-portfolio .Ellipse3,
   .modern-portfolio .Ellipse4,
-  .modern-portfolio .Ellipse5 {
-    width: 200px;
-    height: 200px;
+  .modern-portfolio .Ellipse5,
+  .modern-portfolio .Ellipse6,
+  .modern-portfolio .Ellipse7,
+  .modern-portfolio .Ellipse8,
+  .modern-portfolio .Ellipse9,
+  .modern-portfolio .Ellipse10 {
+    width: clamp(100px, 40vw, 200px);
+    height: clamp(100px, 40vw, 200px);
   }
 
   .header .dynamic-island {
