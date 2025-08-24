@@ -32,6 +32,7 @@ const skill = () => scrollToSection('tech-stack');
 const education = () => scrollToSection('education-section');
 const contact = () => scrollToSection('contact');
 
+
 // Resume Section Functionality
 const resumeButton = document.querySelector('.resume-button');
 
