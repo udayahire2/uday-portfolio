@@ -6,46 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Portfolio of Uday Ahire - Web & Desktop App Developer skilled in React, Tauri, and modern web technologies.">
-    <meta name="keywords" content="Uday Ahire, Portfolio, Web Developer, React, Tauri, Software Developer">
+        content="Portfolio of Uday Ahire - MERN Stack Developer & UI Designer skilled in MongoDB, Express.js, React, Node.js, and Figma.">
+    <meta name="keywords" content="Uday Ahire, Portfolio, MERN Stack Developer, UI Designer, React, Node.js, MongoDB, Figma">
     <meta name="author" content="Uday Ahire">
 
     <title>Uday-portfolio</title>
-    <link rel="icon" type="image/png" href="mypic1.png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="modern-portfolio">
-        <div class="Ellipse1 circle"></div>
-        <div class="Ellipse2 circle"></div>
-        <div class="Ellipse3 circle"></div>
-        <div class="Ellipse4"></div>
-        <div class="Ellipse5"></div>
-        <div class="Ellipse6"></div>
-        <div class="Ellipse7"></div>
-        <div class="Ellipse8"></div>
-        <div class="Ellipse9"></div>
-        <div class="Ellipse10"></div>
         <div class="header">
             <div class="dynamic-island">
                 <a href="#Home">Home</a>
                 <a href="#About">About</a>
                 <a href="#Education">Education</a>
-                <a href="#Skills">Tech Stack</a>
+                <a href="#Skills">Skills</a>
                 <a href="#Projects">Projects</a>
-                <a href="#Resume">Resume</a>
                 <a href="#Contact">Contact</a>
             </div>
         </div>
-        <div data-aos-delay="300" data-aos="fade-right" class="hero" id="Home">
-            <div data-aos="fade-up" data-aos-delay="100" class="intro">
+        <div class="hero" id="Home">
+            <div class="intro">
                 <h1>Hi, I’AM UDAY AHIRE</h1>
-                <p>Web & Windows Software Developer</p>
-                <label>Building powerful, user-friendly Windows applications that boost productivity and
-                    performance.</label><br>
+                <p>MERN Stack Developer & UI Designer</p>
+                <label>Crafting seamless full-stack web experiences with modern technologies and beautiful, intuitive user interfaces.</label><br>
                 <button>Get Started</button>
             </div>
             <div class="icon-section">
@@ -114,35 +103,21 @@
             </div>
         </div>
         <div class="about-me" id="About">
-            <h1 data-aos="fade-down" data-aos-duration="800">ABOUT ME</h1>
-            <div class="content" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <h1 class="section-title">ABOUT ME</h1>
+            <div class="content">
                 <div class="container">
-                    <p>I'm <b>Uday Ahire</b> — a Web & Desktop App Developer with a Diploma in Computer Engineering
-                        (2025).
-                        I build modern web apps using React, HTML/CSS, JavaScript & MySQL, and desktop apps using React
-                    </p>
-                    <p>I also design clean UIs in Figma and constantly explore new tools to improve my craft.</p>
+                    <p>Hi, I'm <b>Uday Ahire</b> — a passionate MERN Stack Developer and UI Designer with a Diploma in Computer Engineering (2025).</p>
+                    <p>I specialize in building full-stack web applications using the <b>MERN stack</b> (<b>MongoDB</b>, <b>Express.js</b>, <b>React</b>, <b>Node.js</b>). I create scalable backends, dynamic frontends, and seamless user experiences that bring ideas to life.</p>
+                    <p>As a UI Designer, I craft beautiful, intuitive interfaces in <b>Figma</b> that prioritize user experience. I'm constantly exploring new technologies and design trends to deliver modern, impactful digital solutions.</p>
                 </div>
-                <img data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400"
-                    style="background-color: rgba(240, 248, 255, 0.138); border-radius: 150px;" src="mypic1.png"
-                    width="300px" height="300px" alt="this is me">
             </div>
         </div>
 
-        <div id="Resume" class="resume-section">
-            <h1 data-aos="fade-down" data-aos-duration="800">RESUME</h1>
-            <div class="resume-content">
-                <div class="resume-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                    <h2>Download My Resume</h2>
-                    <p>Click the button below to download a copy of my resume.</p>
-                    <a href="Uday-resume.png" download class="resume-button">Download Resume</a>
-                </div>
-            </div>
-        </div>
+
         <div class="education-section" id="Education">
-            <h1 data-aos="fade-left" data-aos-duration="800">EDUCATION</h1>
+            <h1 class="section-title">EDUCATION</h1>
             <div class="education-content">
-                <div class="education-card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+                <div class="education-card">
                     <h2>Diploma in Computer Engineering</h2>
                     <p><b>SSVPS Polytechnic Dhule</b></p>
                     <p>2022 - 2025</p>
@@ -163,10 +138,10 @@
         </div>
 
         <div class="tech-stack" id="Skills">
-            <h1 data-aos="fade-down" data-aos-duration="800">TECH STACK</h1>
+            <h1 class="section-title">TECH STACK</h1>
             <div class="tech-content">
 
-                <div class="tech-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="tech-icon">
                     <!-- FIGMA -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                         <rect width="100" height="100" rx="24" fill="black" fill-opacity="0.01" />
@@ -187,7 +162,7 @@
                             fill="#00E676" />
                     </svg>
                 </div>
-                <div class="tech-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                <div class="tech-icon">
                     <!-- C -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                         <rect width="100" height="100" rx="24" fill="black" fill-opacity="0.01" />
@@ -207,7 +182,7 @@
                 </div>
 
 
-                <div class="tech-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                <div class="tech-icon">
                     <!-- JAVASCRIPT -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                         <rect width="100" height="100" rx="24" fill="black" fill-opacity="0.01" />
@@ -217,7 +192,7 @@
                             fill="black" />
                     </svg>
                 </div>
-                <div class="tech-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                <div class="tech-icon">
                     <!-- REACT -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                         <rect width="100" height="100" rx="24" fill="black" fill-opacity="0.01" />
@@ -229,7 +204,7 @@
                             fill="#61DAFB" />
                     </svg>
                 </div>
-                <div class="tech-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
+                <div class="tech-icon">
                     <!-- CSS -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                         <rect width="100" height="100" rx="24" fill="black" fill-opacity="0.01" />
@@ -241,7 +216,7 @@
                             fill="white" />
                     </svg>
                 </div>
-                <div class="tech-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
+                <div class="tech-icon">
                     <!-- HTML -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                         <rect width="100" height="100" rx="24" fill="black" fill-opacity="0.01" />
@@ -258,7 +233,7 @@
                             fill="white" />
                     </svg>
                 </div>
-                <div class="tech-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="900">
+                <div class="tech-icon">
                     <!-- PYTHON -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                         <rect width="100" height="100" rx="24" fill="black" fill-opacity="0.01" />
@@ -282,7 +257,7 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="tech-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1000">
+                <div class="tech-icon">
                     <!-- JAVA -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                         <rect width="100" height="100" rx="24" fill="black" fill-opacity="0.01" />
@@ -309,7 +284,7 @@
                             fill="#E76F00" />
                     </svg>
                 </div>
-                <div class="tech-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1000">
+                <div class="tech-icon">
                     <!-- CPP -->
                     <svg xmlns="http://www.w3.org/2000/svg" height="100" width="100"
                         viewBox="-45.9 -86.08725 397.8 516.5235">
@@ -333,23 +308,23 @@
         </div>
 
         <div id="Projects" class="projects">
-            <h1 data-aos="fade-down" data-aos-duration="800">PROJECTS</h1>
+            <h1 class="section-title">PROJECTS</h1>
             <div class="projects-container">
                 <!-- Project 1 -->
-                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="project-card">
                     <img src="image.png" alt="Project 1">
                     <h2>Portfolio</h2>
                     <p>A modern responsive portfolio built using HTML, CSS, and JavaScript with smooth animations.</p>
                     <a href="https://github.com/udayahire2/uday-portfolio" target="_blank">View Code</a>
                 </div>
                 <!-- Project 2 -->
-                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="project-card">
                     <img src="gram.png" alt="Project 2">
                     <h2>Gram panchayat</h2>
                     <p>Management of Taxes, Certificates, Schemes and Recipient in real time</p>
                     <a href="https://github.com/udayahire2/gram-panchayat" target="_blank">View Code</a>
                 </div>
-                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="project-card">
                     <img src="Frame 55.png" alt="Project 2">
                     <h2>DEVTOOL</h2>
                     <p>Building Animated landing page with responsiveness and GSAP animation</p>
@@ -359,13 +334,13 @@
         </div>
 
         <div class="footer contact" id="Contact">
-            <h1 data-aos="fade-down" data-aos-duration="800">LETS WORK TOGETHER</h1>
-            <label class="label1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">I'yp open to freelance
+            <h1>LETS WORK TOGETHER</h1>
+            <label class="label1">I'm open to freelance
                 work, remote opportunities, internships, and side
                 projects.</label>
             <label class="label2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Let’s build something
                 meaningful together!</label>
-            <div class="contact-form" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <div class="contact-form">
                 <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                     <input type="text" name="name" placeholder="Enter Your Name" required>
                     <input type="email" name="email" placeholder="Enter Your Email" required>
@@ -376,21 +351,11 @@
                 </form>
                 <p id="form-status"></p>
             </div>
-            <footer data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">© 2025 Uday Ahire • Built with React
+            <footer class="footer-text">© 2025 Uday Ahire • MERN Stack Developer & UI Designer
             </footer>
         </div>
 
     </div>
-    <script>
-        AOS.init({
-            offset: 120,
-            duration: 600,
-            easing: 'ease-in-out',
-            delay: 0,
-            once: true,
-            mirror: false
-        });
-    </script>
     <script src="script.js"></script>
 </body>
 
